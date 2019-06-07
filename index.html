@@ -191,6 +191,107 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-11T03:39:17.000Z">2019-08-11</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 528 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/11/TypeHander/">TypeHander</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="string-string"><a href="#string-string" class="headerlink" title="string string[]"></a>string string[]</h2><p>这个解决的问题是:</p>
+<p>数据库存储的是,放json的string,而bean中放的是string[],要实现这两者之间的转换!</p>
+<p>分为两种,第一种将Javabean中的数组string[]数据,转换成数据库接受的类型string</p>
+<p>​                第二种将数据库中的json数据string,查出来,转换成Javabean中的string[]类型</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/11/TypeHander/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-07T03:33:09.000Z">2019-08-07</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 349 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/07/Papehelper-分页/">Papehelper 分页</a>
+            
+        </h1>
+        <div class="content">
+            <p>分页在项目中比较常用 ，这里是一个Spring中可以用的分页插件。使用起来非常方便，但是必须放在要分页的查询语句周围，才会起作用！</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/07/Papehelper-分页/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-04T06:10:54.000Z">2019-08-04</time>
                 
                 
@@ -221,6 +322,92 @@
                 </div>
             </div>
         </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-07T03:43:15.000Z">2019-06-07</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 581 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/07/Shiro/">Shiro</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="认证（ren）"><a href="#认证（ren）" class="headerlink" title="认证（ren）"></a>认证（ren）</h1><p>Subject</p>
+<p>Credential</p>
+<h1 id="授权（shou）"><a href="#授权（shou）" class="headerlink" title="授权（shou）"></a>授权（shou）</h1><p>Permission</p>
+<p>认证是授权的前提</p>
+<h1 id="基本模型"><a href="#基本模型" class="headerlink" title="基本模型"></a>基本模型</h1><p>用户 权限 多对多</p>
+<h1 id="通用模型"><a href="#通用模型" class="headerlink" title="通用模型"></a>通用模型</h1><p>3+2</p>
+<p>用户 角色 权限</p>
+<p>多对多 多对多</p>
+<p><img src="/images/Project.assets/3cc90a25f3969b21edac2648f7924d7b.png" alt></p>
+<h1 id="核心组件"><a href="#核心组件" class="headerlink" title="核心组件"></a>核心组件</h1><p>SecurityManager： Authenticator Authorizer</p>
+<p>Realm（域）是使用shiro的核心组件，在realm中获取认证和授权信息（来源于数据库）</p>
+<h1 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h1><h2 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h2><p>使用shiro的认证功能，SE</p>
+<h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><p>Shiro-core commons-logging junit</p>
+<p><img src="/images/Project.assets/5e84a0ecd0350f3e5fd48d635a36dfda.png" alt></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p><img src="/images/Project.assets/6e28ec7914fbfab39b523a062cc56e3a.png" alt></p>
+<p>最终执行IniRealm的doGetAuthenticationInfo方法这个方法</p>
+<p><img src="/images/Project.assets/4220d05794f52a218b8a6fd107718917.png" alt></p>
+<p><img src="/images/Project.assets/aeb6d4a8fee4597dd3fc2ff26bdebdf3.png" alt></p>
+<h2 id="案例2（自定义的Realm）"><a href="#案例2（自定义的Realm）" class="headerlink" title="案例2（自定义的Realm）"></a>案例2（自定义的Realm）</h2><p>自定义Realm，自行处理 认证信息</p>
+<p>配置自定义的realm（继承AuthorizingRealm）</p>
+<p>在ini配置文件中配置SecurityManager使用的realm为自定义的realm</p>
+<p><img src="/images/Project.assets/79cee2754fd5f2530a696645cbf4d33a.png" alt></p>
+<p>重写AuthorizingRealm中的doGetAuthenticationInfo（认证）和doGetAuthorizationInfo（授权）的方法</p>
+<p><img src="/images/Project.assets/e98e40d4c216e08ba365bd4d72cb1885.png" alt></p>
+<p>当执行鉴权操作时会进入到doGetAuthorizationInfo方法中执行，获得（查询）该用户所拥有的权限</p>
+<p><img src="/images/Project.assets/89a616ceebda8d1dfe52cfad3ad49392.png" alt></p>
+<h1 id="Springboot整合shiro"><a href="#Springboot整合shiro" class="headerlink" title="Springboot整合shiro"></a>Springboot整合shiro</h1><h2 id="导包-1"><a href="#导包-1" class="headerlink" title="导包"></a>导包</h2><p>Shiro-spring（core、web）</p>
+<p><img src="/images/Project.assets/972fdc74c03a9bca0d07611f55ff414a.png" alt></p>
+<h2 id="注册组件"><a href="#注册组件" class="headerlink" title="注册组件"></a>注册组件</h2><p>shiroFilterFactoryBean、SecurityManager、自定义Realm</p>
+<h3 id="ShiroFilterFactoryBean"><a href="#ShiroFilterFactoryBean" class="headerlink" title="ShiroFilterFactoryBean"></a>ShiroFilterFactoryBean</h3><p><img src="/images/Project.assets/c86db55c64ce768b1db9b9320760e1f4.png" alt></p>
+<h3 id="SecurityManager-安全管理器"><a href="#SecurityManager-安全管理器" class="headerlink" title="SecurityManager(安全管理器)"></a>SecurityManager(安全管理器)</h3><p><img src="/images/Project.assets/31cc87ca30043be6363292ebd3706d69.png" alt></p>
+<h3 id="自定义Realm"><a href="#自定义Realm" class="headerlink" title="自定义Realm"></a>自定义Realm</h3><p><img src="/images/Project.assets/42a110968e769d526361ce8d58041214.png" alt></p>
+<h2 id="声明式的配置"><a href="#声明式的配置" class="headerlink" title="声明式的配置"></a>声明式的配置</h2><h3 id="导包aspectj-weaver"><a href="#导包aspectj-weaver" class="headerlink" title="导包aspectj-weaver"></a>导包aspectj-weaver</h3><p><img src="/images/Project.assets/92f535d3b5fc9113394ba0e12956151f.png" alt></p>
+<h3 id="EnableAspectjAutoProxy"><a href="#EnableAspectjAutoProxy" class="headerlink" title="@EnableAspectjAutoProxy"></a>@EnableAspectjAutoProxy</h3><p><img src="/images/Project.assets/4b6ff7540f2fab44796369638d859855.png" alt></p>
+<h3 id="AuthorizationAttributeSourceAdvisor"><a href="#AuthorizationAttributeSourceAdvisor" class="headerlink" title="AuthorizationAttributeSourceAdvisor"></a>AuthorizationAttributeSourceAdvisor</h3><p>注册组件</p>
+<p><img src="/images/Project.assets/5055d0f00f28a6786aed96b67c083889.png" alt></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在RequestMapping对应的方法上使用注解</p>
+<p><img src="/images/Project.assets/edb93b7f2f7ff1ae26ef1b950167b62f.png" alt></p>
+<h2 id="整合商城项目"><a href="#整合商城项目" class="headerlink" title="整合商城项目"></a>整合商城项目</h2><h3 id="CorsConfig"><a href="#CorsConfig" class="headerlink" title="CorsConfig"></a>CorsConfig</h3><p>之前做过的部分</p>
+<p><img src="/images/Project.assets/204258f5bc29099e41164b7dbd991ac2.png" alt></p>
+<h3 id="自定义的sessionManager"><a href="#自定义的sessionManager" class="headerlink" title="自定义的sessionManager"></a>自定义的sessionManager</h3><p><img src="/images/Project.assets/4cc7ad1afa10103ef92bd192fa5e70e0.png" alt></p>
+<p>配置给SecurityManager</p>
+<p><img src="/images/Project.assets/4897a25451a56a733010ae373c92df23.png" alt></p>
+<h3 id="在自定义realm执行查询"><a href="#在自定义realm执行查询" class="headerlink" title="在自定义realm执行查询"></a>在自定义realm执行查询</h3><p><img src="/images/Project.assets/7716fed8bd4d3e8f89afcea95ed3bd73.png" alt></p>
+<h3 id="认证通过后可以拿到认证信息"><a href="#认证通过后可以拿到认证信息" class="headerlink" title="认证通过后可以拿到认证信息"></a>认证通过后可以拿到认证信息</h3><p><img src="/images/Project.assets/6249597cbaa5452d2b0a1865d448447d.png" alt></p>
+
+        </div>
+        
         
         
     </div>
@@ -277,7 +464,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        5
                     </p>
                 </div>
             </div>
@@ -297,7 +484,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        2
                     </p>
                 </div>
             </div>
@@ -409,7 +596,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Spring/" style="font-size: 10px;">Spring</a>
+        <a href="/tags/Spring/" style="font-size: 20px;">Spring</a> <a href="/tags/权限管理/" style="font-size: 10px;">权限管理</a>
     </div>
 </div>
     
@@ -443,6 +630,44 @@
         
         <article class="media">
             
+            <a href="/2019/08/11/TypeHander/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeHander">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T03:39:17.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/TypeHander/" class="title has-link-black-ter is-size-6 has-text-weight-normal">TypeHander</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/07/Papehelper-分页/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Papehelper 分页">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-07T03:33:09.000Z">2019-08-07</time></div>
+                    <a href="/2019/08/07/Papehelper-分页/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Papehelper 分页</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/08/04/SpringBoot-跨域配置/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="SpringBoot 跨域配置">
@@ -453,6 +678,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-04T06:10:54.000Z">2019-08-04</time></div>
                     <a href="/2019/08/04/SpringBoot-跨域配置/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SpringBoot 跨域配置</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/07/Shiro/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Shiro">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T03:43:15.000Z">2019-06-07</time></div>
+                    <a href="/2019/06/07/Shiro/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Shiro</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -488,6 +732,17 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
                     <span class="level-item tag">1</span>
                 </span>
             </a>
@@ -509,6 +764,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Spring/">
                         <span class="tag">Spring</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/权限管理/">
+                        <span class="tag">权限管理</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -556,6 +818,44 @@
         
         <article class="media">
             
+            <a href="/2019/08/11/TypeHander/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeHander">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-11T03:39:17.000Z">2019-08-11</time></div>
+                    <a href="/2019/08/11/TypeHander/" class="title has-link-black-ter is-size-6 has-text-weight-normal">TypeHander</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/07/Papehelper-分页/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Papehelper 分页">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-07T03:33:09.000Z">2019-08-07</time></div>
+                    <a href="/2019/08/07/Papehelper-分页/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Papehelper 分页</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/08/04/SpringBoot-跨域配置/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="SpringBoot 跨域配置">
@@ -566,6 +866,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-04T06:10:54.000Z">2019-08-04</time></div>
                     <a href="/2019/08/04/SpringBoot-跨域配置/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SpringBoot 跨域配置</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/07/Shiro/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Shiro">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-07T03:43:15.000Z">2019-06-07</time></div>
+                    <a href="/2019/06/07/Shiro/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Shiro</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -601,6 +920,17 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
                     <span class="level-item tag">1</span>
                 </span>
             </a>
@@ -622,6 +952,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Spring/">
                         <span class="tag">Spring</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/权限管理/">
+                        <span class="tag">权限管理</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -685,7 +1022,7 @@
                 <script>
                     var now = new Date();
                     function createtime() {
-                        var grt= new Date("8/1/2019 00:00:00");//此处修改你的建站时间或者网站上线时间
+                        var grt= new Date("1/1/2019 00:00:00");//此处修改你的建站时间或者网站上线时间
                         now.setTime(now.getTime()+250);
                         days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
                         hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);

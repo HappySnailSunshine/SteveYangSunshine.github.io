@@ -7,18 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - SunShine</title>
+<title>Papehelper 分页 - SunShine</title>
 
 
-    <meta name="keywords" content="Spring,权限管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SunShine">
-<meta property="og:url" content="www.yanglei.pro/categories/index.html">
+    <meta name="description" content="分页在项目中比较常用 ，这里是一个Spring中可以用的分页插件。使用起来非常方便，但是必须放在要分页的查询语句周围，才会起作用！">
+<meta name="keywords" content="Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Papehelper 分页">
+<meta property="og:url" content="www.yanglei.pro/2019/08/07/Papehelper-分页/index.html">
 <meta property="og:site_name" content="SunShine">
+<meta property="og:description" content="分页在项目中比较常用 ，这里是一个Spring中可以用的分页插件。使用起来非常方便，但是必须放在要分页的查询语句周围，才会起作用！">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/images/og_image.png">
+<meta property="og:updated_time" content="2019-08-07T03:38:09.486Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SunShine">
+<meta name="twitter:title" content="Papehelper 分页">
+<meta name="twitter:description" content="分页在项目中比较常用 ，这里是一个Spring中可以用的分页插件。使用起来非常方便，但是必须放在要分页的查询语句周围，才会起作用！">
 <meta name="twitter:image" content="/images/og_image.png">
 
 
@@ -77,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="SunShine" height="28">
+                <img src="/images/logo.svg" alt="Papehelper 分页" height="28">
             
             </a>
         </div>
@@ -91,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -135,18 +139,121 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-07T03:33:09.000Z">2019-08-07</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 349 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-            </ul>
+                Papehelper 分页
+            
+        </h1>
+        <div class="content">
+            <p>分页在项目中比较常用 ，这里是一个Spring中可以用的分页插件。使用起来非常方便，但是必须放在要分页的查询语句周围，才会起作用！</p>
+<a id="more"></a>
+
+<p>首先需要导入分页所需要的依赖:</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!--分页插件--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.github.pagehelper<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>pagehelper-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.2.5<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>application.yml中需要写配置项:</p>
+<figure class="highlight yml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">spring:</span></span><br><span class="line"><span class="hljs-attr">  datasource:</span></span><br><span class="line"><span class="hljs-attr">    driver-class-name:</span> <span class="hljs-string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="hljs-attr">    url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/j16_db</span></span><br><span class="line"><span class="hljs-attr">    username:</span> <span class="hljs-string">root</span></span><br><span class="line"><span class="hljs-attr">    password:</span> <span class="hljs-number">123456</span></span><br><span class="line"><span class="hljs-attr">pagehelper:</span></span><br><span class="line"><span class="hljs-attr">  helper-dialect:</span> <span class="hljs-string">mysql</span></span><br><span class="line"><span class="hljs-attr">logging:</span></span><br><span class="line"><span class="hljs-attr">  level:</span></span><br><span class="line"><span class="hljs-attr">    com:</span></span><br><span class="line"><span class="hljs-attr">      cskaoyan:</span></span><br><span class="line"><span class="hljs-attr">        pagehelper:</span></span><br><span class="line"><span class="hljs-attr">          mapper:</span> <span class="hljs-string">debug</span></span><br></pre></td></tr></table></figure>
+
+<p>其他层正常写,然后services层:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> com.cskaoyan.pagehelper.bean.ListBean;</span><br><span class="line"><span class="hljs-keyword">import</span> com.cskaoyan.pagehelper.bean.User;</span><br><span class="line"><span class="hljs-keyword">import</span> com.cskaoyan.pagehelper.mapper.UserMapper;</span><br><span class="line"><span class="hljs-keyword">import</span> com.github.pagehelper.PageHelper;</span><br><span class="line"><span class="hljs-keyword">import</span> com.github.pagehelper.PageInfo;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Service</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">UserService</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Autowired</span></span><br><span class="line">    UserMapper userMapper;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> ListBean <span class="hljs-title">queryUsers</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> limit)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-comment">//只需要加下面一句话就可以分页</span></span><br><span class="line">        PageHelper.startPage(start, limit);</span><br><span class="line">        <span class="hljs-comment">//如果前端的需求是要根据某一个值,进行排序,按照下面的写,sort里面是根据哪一个值排序,order里面是要写顺序还是逆序排序,bean中的这两个值是需要接受前端数据来获得得!</span></span><br><span class="line">        <span class="hljs-comment">//PageHelper.startPage(steveGoods.getPage(), steveGoods.getLimit(), 			                      steveGoods.getSort() + " " + steveGoods.getOrder());</span></span><br><span class="line">        List&lt;User&gt; users = userMapper.queryUsers();</span><br><span class="line">        PageInfo&lt;User&gt; userPageInfo = <span class="hljs-keyword">new</span> PageInfo&lt;&gt;(users);</span><br><span class="line">        <span class="hljs-comment">//下面这句还可以查询出来总数(不用自己另外写sql语句来查询总数)</span></span><br><span class="line">        <span class="hljs-keyword">long</span> total = userPageInfo.getTotal();</span><br><span class="line"></span><br><span class="line">        ListBean&lt;User&gt; userListBean = <span class="hljs-keyword">new</span> ListBean&lt;&gt;();</span><br><span class="line">        userListBean.setItems(users);</span><br><span class="line">        userListBean.setTotal(total);</span><br><span class="line">        <span class="hljs-keyword">return</span> userListBean;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Spring/">Spring</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/11/TypeHander/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">TypeHander</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/04/SpringBoot-跨域配置/">
+                <span class="level-item">SpringBoot 跨域配置</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 

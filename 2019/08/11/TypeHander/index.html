@@ -7,18 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - SunShine</title>
+<title>TypeHander - SunShine</title>
 
 
-    <meta name="keywords" content="Spring,权限管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SunShine">
-<meta property="og:url" content="www.yanglei.pro/categories/index.html">
+    <meta name="description" content="string string[]这个解决的问题是: 数据库存储的是,放json的string,而bean中放的是string[],要实现这两者之间的转换! 分为两种,第一种将Javabean中的数组string[]数据,转换成数据库接受的类型string ​                第二种将数据库中的json数据string,查出来,转换成Javabean中的string[]类型">
+<meta name="keywords" content="Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeHander">
+<meta property="og:url" content="www.yanglei.pro/2019/08/11/TypeHander/index.html">
 <meta property="og:site_name" content="SunShine">
+<meta property="og:description" content="string string[]这个解决的问题是: 数据库存储的是,放json的string,而bean中放的是string[],要实现这两者之间的转换! 分为两种,第一种将Javabean中的数组string[]数据,转换成数据库接受的类型string ​                第二种将数据库中的json数据string,查出来,转换成Javabean中的string[]类型">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/images/og_image.png">
+<meta property="og:updated_time" content="2019-08-11T03:41:37.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SunShine">
+<meta name="twitter:title" content="TypeHander">
+<meta name="twitter:description" content="string string[]这个解决的问题是: 数据库存储的是,放json的string,而bean中放的是string[],要实现这两者之间的转换! 分为两种,第一种将Javabean中的数组string[]数据,转换成数据库接受的类型string ​                第二种将数据库中的json数据string,查出来,转换成Javabean中的string[]类型">
 <meta name="twitter:image" content="/images/og_image.png">
 
 
@@ -77,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="SunShine" height="28">
+                <img src="/images/logo.svg" alt="TypeHander" height="28">
             
             </a>
         </div>
@@ -91,7 +95,7 @@
                 <a class="navbar-item"
                 href="/archives">归档</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">分类</a>
                 
                 <a class="navbar-item"
@@ -135,18 +139,121 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-11T03:39:17.000Z">2019-08-11</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 528 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-            </ul>
+                TypeHander
+            
+        </h1>
+        <div class="content">
+            <h2 id="string-string"><a href="#string-string" class="headerlink" title="string string[]"></a>string string[]</h2><p>这个解决的问题是:</p>
+<p>数据库存储的是,放json的string,而bean中放的是string[],要实现这两者之间的转换!</p>
+<p>分为两种,第一种将Javabean中的数组string[]数据,转换成数据库接受的类型string</p>
+<p>​                第二种将数据库中的json数据string,查出来,转换成Javabean中的string[]类型</p>
+<a id="more"></a>
+
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> com.fasterxml.jackson.core.JsonProcessingException;</span><br><span class="line"><span class="hljs-keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line"><span class="hljs-keyword">import</span> org.apache.ibatis.type.BaseTypeHandler;</span><br><span class="line"><span class="hljs-keyword">import</span> org.apache.ibatis.type.JdbcType;</span><br><span class="line"><span class="hljs-keyword">import</span> org.apache.ibatis.type.MappedTypes;</span><br><span class="line"><span class="hljs-keyword">import</span> org.apache.ibatis.type.TypeHandler;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.CallableStatement;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@MappedTypes</span>(String[].class)</span><br><span class="line">public class TransferStringArrayHandler implements TypeHandler&lt;String[]&gt; &#123;</span><br><span class="line">    ObjectMapper objectMapper = <span class="hljs-keyword">new</span> ObjectMapper();</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">/*插入数据 由javabean转换为数据库接收的类型*/</span></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setParameter</span><span class="hljs-params">(PreparedStatement preparedStatement, <span class="hljs-keyword">int</span> index, String[] strings, JdbcType jdbcType)</span> <span class="hljs-keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            String jsonArray = objectMapper.writeValueAsString(strings);</span><br><span class="line">            preparedStatement.setString(index,jsonArray);</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (JsonProcessingException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">//由数据中查询出的结果转换成javabean中的类型</span></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-keyword">public</span> String[] getResult(ResultSet resultSet, String parameterName) <span class="hljs-keyword">throws</span> SQLException &#123;</span><br><span class="line">        String value = resultSet.getString(parameterName);</span><br><span class="line">        <span class="hljs-keyword">return</span> parseString2StringArray(value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">private</span> String[] parseString2StringArray(String value) &#123;</span><br><span class="line"></span><br><span class="line">        String[] strings = <span class="hljs-keyword">new</span> String[<span class="hljs-number">0</span>];</span><br><span class="line">        <span class="hljs-keyword">if</span> (value == <span class="hljs-keyword">null</span>)&#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> strings;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            strings = objectMapper.readValue(value, String[].class);</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> strings;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-keyword">public</span> String[] getResult(ResultSet resultSet, <span class="hljs-keyword">int</span> index) <span class="hljs-keyword">throws</span> SQLException &#123;</span><br><span class="line">        String value = resultSet.getString(index);</span><br><span class="line">        <span class="hljs-keyword">return</span> parseString2StringArray(value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-keyword">public</span> String[] getResult(CallableStatement callableStatement, <span class="hljs-keyword">int</span> index) <span class="hljs-keyword">throws</span> SQLException &#123;</span><br><span class="line">        String value = callableStatement.getString(index);</span><br><span class="line">        <span class="hljs-keyword">return</span> parseString2StringArray(value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="user-user-detail"><a href="#user-user-detail" class="headerlink" title="user user.detail"></a>user user.detail</h2><p>查出来数据,自动查出来detail</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> com.cskaoyan.bean.UserDetail;</span><br><span class="line"><span class="hljs-keyword">import</span> com.fasterxml.jackson.core.JsonProcessingException;</span><br><span class="line"><span class="hljs-keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line"><span class="hljs-keyword">import</span> org.apache.ibatis.type.JdbcType;</span><br><span class="line"><span class="hljs-keyword">import</span> org.apache.ibatis.type.MappedTypes;</span><br><span class="line"><span class="hljs-keyword">import</span> org.apache.ibatis.type.TypeHandler;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.CallableStatement;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@MappedTypes</span>(UserDetail.class)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TransferUserDetailHandler</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">TypeHandler</span>&lt;<span class="hljs-title">UserDetail</span>&gt; </span>&#123;</span><br><span class="line">    ObjectMapper objectMapper = <span class="hljs-keyword">new</span> ObjectMapper();</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setParameter</span><span class="hljs-params">(PreparedStatement preparedStatement, <span class="hljs-keyword">int</span> i, UserDetail userDetail, JdbcType jdbcType)</span> <span class="hljs-keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        String s = <span class="hljs-keyword">null</span>;</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            s = objectMapper.writeValueAsString(userDetail);</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (JsonProcessingException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        preparedStatement.setString(i,s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> UserDetail <span class="hljs-title">getResult</span><span class="hljs-params">(ResultSet resultSet, String s)</span> <span class="hljs-keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        String string = resultSet.getString(s);</span><br><span class="line">        <span class="hljs-keyword">return</span> parseString2UserDetail(string);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> UserDetail <span class="hljs-title">parseString2UserDetail</span><span class="hljs-params">(String string)</span> </span>&#123;</span><br><span class="line">        UserDetail userDetail = <span class="hljs-keyword">null</span>;</span><br><span class="line">        <span class="hljs-keyword">if</span> (string == <span class="hljs-keyword">null</span>)</span><br><span class="line">            <span class="hljs-keyword">return</span> userDetail;</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            userDetail = objectMapper.readValue(string, UserDetail.class);</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> userDetail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> UserDetail <span class="hljs-title">getResult</span><span class="hljs-params">(ResultSet resultSet, <span class="hljs-keyword">int</span> i)</span> <span class="hljs-keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        String string = resultSet.getString(i);</span><br><span class="line">        <span class="hljs-keyword">return</span> parseString2UserDetail(string);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> UserDetail <span class="hljs-title">getResult</span><span class="hljs-params">(CallableStatement callableStatement, <span class="hljs-keyword">int</span> i)</span> <span class="hljs-keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        String string = callableStatement.getString(i);</span><br><span class="line">        <span class="hljs-keyword">return</span> parseString2UserDetail(string);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-comment">/*插入数据 由javabean转换为数据库接收的类型*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p># </p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Spring/">Spring</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/06/Steve/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">IDEA Keymap</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/07/Papehelper-分页/">
+                <span class="level-item">Papehelper 分页</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
                 
 
 
