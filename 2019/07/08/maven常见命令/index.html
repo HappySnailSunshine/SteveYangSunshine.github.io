@@ -7,22 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Maven中Scope作用域 - SunShine</title>
+<title>Maven常见命令 - SunShine</title>
 
 
-    <meta name="description" content="Maven中默认的作用域是compile,测试的时候作用域是Test。">
+    <meta name="description" content="Maven中常见命令，在项目中使用较多,要熟练掌握！">
 <meta name="keywords" content="Maven">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven中Scope作用域">
-<meta property="og:url" content="www.yanglei.pro/2019/09/27/Maven中Scope作用域/index.html">
+<meta property="og:title" content="Maven常见命令">
+<meta property="og:url" content="www.yanglei.pro/2019/07/08/maven常见命令/index.html">
 <meta property="og:site_name" content="SunShine">
-<meta property="og:description" content="Maven中默认的作用域是compile,测试的时候作用域是Test。">
+<meta property="og:description" content="Maven中常见命令，在项目中使用较多,要熟练掌握！">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/images/og_image.png">
-<meta property="og:updated_time" content="2019-11-06T09:41:32.346Z">
+<meta property="og:updated_time" content="2019-11-06T09:50:51.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven中Scope作用域">
-<meta name="twitter:description" content="Maven中默认的作用域是compile,测试的时候作用域是Test。">
+<meta name="twitter:title" content="Maven常见命令">
+<meta name="twitter:description" content="Maven中常见命令，在项目中使用较多,要熟练掌握！">
 <meta name="twitter:image" content="/images/og_image.png">
 
 
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Maven中Scope作用域" height="28">
+                <img src="/images/logo.svg" alt="Maven常见命令" height="28">
             
             </a>
         </div>
@@ -145,13 +145,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-27T09:33:13.000Z">2019-09-27</time>
+                <time class="level-item has-text-grey" datetime="2019-07-08T09:12:46.000Z">2019-07-08</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 328 个字)
+                    5 分钟 读完 (大约 692 个字)
                 </span>
                 
                 
@@ -160,24 +160,55 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Maven中Scope作用域
+                Maven常见命令
             
         </h1>
         <div class="content">
-            <p>Maven中默认的作用域是compile,测试的时候作用域是Test。</p>
+            <p>Maven中常见命令，在项目中使用较多,要熟练掌握！</p>
 <a id="more"></a>
 
-<h2 id="Scope作用域"><a href="#Scope作用域" class="headerlink" title="Scope作用域"></a>Scope作用域</h2><p>Compile：编译的时候需要并且要打包到应用（lib文件夹）（通常默认的是compile）</p>
-<p>Provided：编译的时候需要 打包的时候不需要（通常只有servlet是provided）</p>
-<p>Test：测试；scope为test的依赖只能由Tests目录下的代码使用，sources目录下代码不能使用（通常只有junit4和spring-test这两个依赖scope为test）</p>
-<p><img src="/images/Spring.assets/2f6bdd1b154347316368cca69ad43071-1569141259666.png" alt></p>
-<p>Runtime：运行<br>，编译的时候不需要，运行的时候需要（通常只有mysql-connector-java的scope为runtime）</p>
-<h2 id="使用maven要在网络良好的情况下使用"><a href="#使用maven要在网络良好的情况下使用" class="headerlink" title="使用maven要在网络良好的情况下使用"></a>使用maven要在网络良好的情况下使用</h2><p>如果jar包没有下载下来 .lastupdated</p>
-<p>如果依赖出现问题：去本地仓库检查→根据groupId、artifactId、version对应的文件夹去检查，如果jar包未下载，则清空重新下载</p>
-<h2 id="注意（一定注意）"><a href="#注意（一定注意）" class="headerlink" title="注意（一定注意）"></a>注意（一定注意）</h2><p>当你引入一个其他人的maven工程的时候，首先要检查maven配置是否是自己的</p>
-<h2 id="注意点2"><a href="#注意点2" class="headerlink" title="注意点2"></a>注意点2</h2><p><img src="/images/Spring.assets/3cb3a94e149ecd87e4285c0bcf63a84f-1569141259666.png" alt></p>
-<h2 id="Properties标签"><a href="#Properties标签" class="headerlink" title="Properties标签"></a>Properties标签</h2><p>&lt;properties&gt;同属于project的子标签</p>
-<p><img src="/images/Spring.assets/bb60666642f99bad2cbbd37261613293-1569141259666.png" alt></p>
+<h1 id="Web项目基本知识"><a href="#Web项目基本知识" class="headerlink" title="Web项目基本知识"></a>Web项目基本知识</h1><p><img src="/images/Spring.assets/9a7ea2a686c9564a60edd62372e88d64-1569141259664.png" alt></p>
+<h1 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h1><p>过程</p>
+<p><img src="/images/Spring.assets/c320bf7d7cb7dcc7726a300166b5c8ad-1569141259665.png" alt></p>
+<p>Clean：清理后续所有过程产生的文件</p>
+<p>Compile：编译，不仅仅是class、同时包含将resources所对应的文件放到classes目录下</p>
+<p>Test：单元测试、（Tests测试目录）所有的单元测试执行一遍、也会输出一个单元测试的报告</p>
+<p>Package：将文件打包成jar或者war</p>
+<h1 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h1><p>对jar包的版本进行统一的管理</p>
+<h1 id="Maven工程"><a href="#Maven工程" class="headerlink" title="Maven工程"></a>Maven工程</h1><p>配置文件：pom.xml (项目的根目录下)</p>
+<p><img src="/images/Spring.assets/3db4f2fe049b7826b5a6c95856d6865f-1569141259665.png" alt></p>
+<p><img src="/images/Spring.assets/a0de652fb31594ef81979053e91add0a-1569141259665.png" alt></p>
+<p><img src="/images/Spring.assets/1572859148539.png" alt="1572859142818"></p>
+<h1 id="Maven的安装及使用"><a href="#Maven的安装及使用" class="headerlink" title="Maven的安装及使用"></a>Maven的安装及使用</h1><h2 id="下载压缩包解压"><a href="#下载压缩包解压" class="headerlink" title="下载压缩包解压"></a>下载压缩包解压</h2><h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>MAVEN_HOME:包含bin文件夹的目录</p>
+<p>Path：%MAVEN_HOME%/bin</p>
+<p>JAVA_HOME</p>
+<p>输入mvn –v的时候出现版本号，意味着安装完成</p>
+<h2 id="Maven配置"><a href="#Maven配置" class="headerlink" title="Maven配置"></a>Maven配置</h2><h3 id="指定本地仓库"><a href="#指定本地仓库" class="headerlink" title="指定本地仓库"></a>指定本地仓库</h3><p><img src="/images/Spring.assets/ea2d977d9d1d2e9ec78ca58134d846fb-1569141259665.png" alt></p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>要注意的点：要在mirrors标签里配置mirror标签，推荐大家使用阿里云的镜像（远程仓库）</p>
+<p><img src="/images/Spring.assets/d1de40cf257a477ffc5cdea69ccbc067-1569141259665.png" alt></p>
+<h2 id="Maven工程的目录结构"><a href="#Maven工程的目录结构" class="headerlink" title="Maven工程的目录结构"></a>Maven工程的目录结构</h2><p>--src</p>
+<p>--main 开发部署的代码配置文件等文件</p>
+<p>--java 放的是代码</p>
+<p>--resources 配置文件及资源文件</p>
+<p>--webapp web项目的根目录</p>
+<p>--test 单元测试相关的文件</p>
+<blockquote>
+<p>--java 放的是测试代码</p>
+</blockquote>
+<p>--resources 测试配置文件及资源文件（可以不要，可以使用main下的配置文件）</p>
+<p>--pom.xml maven的配置文件</p>
+<p>--target 文件夹，项目构建相关流程产生的文件，都放在这个目录下</p>
+<h2 id="Maven命令"><a href="#Maven命令" class="headerlink" title="Maven命令"></a>Maven命令</h2><h3 id="mvn-compile"><a href="#mvn-compile" class="headerlink" title="mvn compile"></a>mvn compile</h3><p>编译：将java和resources目录下的代码和文件编译，编译到target/classes目录下</p>
+<h3 id="mvn-clean"><a href="#mvn-clean" class="headerlink" title="mvn clean"></a>mvn clean</h3><p>后续所有构建过程产生的文件都会被清理（删除）掉、target文件夹都会被删除掉</p>
+<h3 id="mvn-test"><a href="#mvn-test" class="headerlink" title="mvn test"></a>mvn test</h3><p>执行单元测试，src\test\java所有包含@Test注解的方法</p>
+<p>如果单元测试执行失败不会执行后续的操作</p>
+<p>执行失败原因：类名，包含Test</p>
+<h3 id="mvn-package"><a href="#mvn-package" class="headerlink" title="mvn package"></a>mvn package</h3><p>执行打包：默认打包成jar包，文件名artifactId+version+打包类型</p>
+<p>配置文件修改打包类型&lt;packaging&gt;war</p>
+<p>要求：maven 写packaging=war</p>
+<h3 id="mvn-install"><a href="#mvn-install" class="headerlink" title="mvn install"></a>mvn install</h3><p>将我们的项目安装到本地仓库</p>
+<h1 id="idea中使用maven"><a href="#idea中使用maven" class="headerlink" title="idea中使用maven"></a>idea中使用maven</h1><p><img src="/images/Spring.assets/c7b6ea5af0c11ebe219bd1a7cc480e58-1569141259666.png" alt></p>
+<p><img src="/images/Spring.assets/37f72d703b5061f9c21c474b7469a4fa-1569141259666.png" alt></p>
 
         </div>
         
@@ -237,16 +268,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/04/Mybatis中占位符的区别/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/04/设计模式/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Mybatis中占位符的区别</span>
+                <span class="level-item">常用设计模式</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/21/Maven中Jdk问题/">
-                <span class="level-item">Maven中Jdk问题</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/01/Steve/">
+                <span class="level-item">IDEA Keymap</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>

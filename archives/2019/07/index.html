@@ -7,22 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Maven中Scope作用域 - SunShine</title>
+<title>归档: 2019/7 - SunShine</title>
 
 
-    <meta name="description" content="Maven中默认的作用域是compile,测试的时候作用域是Test。">
-<meta name="keywords" content="Maven">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Maven中Scope作用域">
-<meta property="og:url" content="www.yanglei.pro/2019/09/27/Maven中Scope作用域/index.html">
+    <meta name="keywords" content="Java">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SunShine">
+<meta property="og:url" content="www.yanglei.pro/archives/2019/07/index.html">
 <meta property="og:site_name" content="SunShine">
-<meta property="og:description" content="Maven中默认的作用域是compile,测试的时候作用域是Test。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/images/og_image.png">
-<meta property="og:updated_time" content="2019-11-06T09:41:32.346Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven中Scope作用域">
-<meta name="twitter:description" content="Maven中默认的作用域是compile,测试的时候作用域是Test。">
+<meta name="twitter:title" content="SunShine">
 <meta name="twitter:image" content="/images/og_image.png">
 
 
@@ -81,7 +77,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Maven中Scope作用域" height="28">
+                <img src="/images/logo.svg" alt="SunShine" height="28">
             
             </a>
         </div>
@@ -139,118 +135,45 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-27T09:33:13.000Z">2019-09-27</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 328 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                Maven中Scope作用域
-            
-        </h1>
-        <div class="content">
-            <p>Maven中默认的作用域是compile,测试的时候作用域是Test。</p>
-<a id="more"></a>
 
-<h2 id="Scope作用域"><a href="#Scope作用域" class="headerlink" title="Scope作用域"></a>Scope作用域</h2><p>Compile：编译的时候需要并且要打包到应用（lib文件夹）（通常默认的是compile）</p>
-<p>Provided：编译的时候需要 打包的时候不需要（通常只有servlet是provided）</p>
-<p>Test：测试；scope为test的依赖只能由Tests目录下的代码使用，sources目录下代码不能使用（通常只有junit4和spring-test这两个依赖scope为test）</p>
-<p><img src="/images/Spring.assets/2f6bdd1b154347316368cca69ad43071-1569141259666.png" alt></p>
-<p>Runtime：运行<br>，编译的时候不需要，运行的时候需要（通常只有mysql-connector-java的scope为runtime）</p>
-<h2 id="使用maven要在网络良好的情况下使用"><a href="#使用maven要在网络良好的情况下使用" class="headerlink" title="使用maven要在网络良好的情况下使用"></a>使用maven要在网络良好的情况下使用</h2><p>如果jar包没有下载下来 .lastupdated</p>
-<p>如果依赖出现问题：去本地仓库检查→根据groupId、artifactId、version对应的文件夹去检查，如果jar包未下载，则清空重新下载</p>
-<h2 id="注意（一定注意）"><a href="#注意（一定注意）" class="headerlink" title="注意（一定注意）"></a>注意（一定注意）</h2><p>当你引入一个其他人的maven工程的时候，首先要检查maven配置是否是自己的</p>
-<h2 id="注意点2"><a href="#注意点2" class="headerlink" title="注意点2"></a>注意点2</h2><p><img src="/images/Spring.assets/3cb3a94e149ecd87e4285c0bcf63a84f-1569141259666.png" alt></p>
-<h2 id="Properties标签"><a href="#Properties标签" class="headerlink" title="Properties标签"></a>Properties标签</h2><p>&lt;properties&gt;同属于project的子标签</p>
-<p><img src="/images/Spring.assets/bb60666642f99bad2cbbd37261613293-1569141259666.png" alt></p>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Maven/">Maven</a>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-<div class="card">
+<div class="card widget">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
+        <h3 class="tag is-link">
+        七月 2019
+        </h3>
+        <div class="timeline">
+        
+            <article class="media">
                 
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
-</div>
-
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-07-08T09:12:46.000Z">2019-07-08</time>
+                        <a href="/2019/07/08/maven常见命令/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Maven常见命令</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="media">
                 
-                
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
-
-<div class="notification is-danger">
-    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
-</div>
-
-                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-07-01T03:43:15.000Z">2019-07-01</time>
+                        <a href="/2019/07/01/Steve/" class="title has-link-black-ter is-size-6 has-text-weight-normal">IDEA Keymap</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
         </div>
-    </div>
-</div>
-
-
-
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/04/Mybatis中占位符的区别/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Mybatis中占位符的区别</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/21/Maven中Jdk问题/">
-                <span class="level-item">Maven中Jdk问题</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
     </div>
 </div>
 
