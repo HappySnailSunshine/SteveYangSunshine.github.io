@@ -7,18 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>标签: SpringBoot - SunShine</title>
+<title>Maven父子工程 - SunShine</title>
 
 
-    <meta name="keywords" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SunShine">
-<meta property="og:url" content="www.yanglei.pro/tags/SpringBoot/index.html">
+    <meta name="description" content="父子工程在平时的时候，很少用。但是最近的一个微服务项目，里面的guns脚手架，其实就是父子工程！">
+<meta name="keywords" content="Maven">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maven父子工程">
+<meta property="og:url" content="www.yanglei.pro/2019/09/14/Maven父子工程/index.html">
 <meta property="og:site_name" content="SunShine">
+<meta property="og:description" content="父子工程在平时的时候，很少用。但是最近的一个微服务项目，里面的guns脚手架，其实就是父子工程！">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/images/og_image.png">
+<meta property="og:updated_time" content="2019-11-04T09:37:08.517Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SunShine">
+<meta name="twitter:title" content="Maven父子工程">
+<meta name="twitter:description" content="父子工程在平时的时候，很少用。但是最近的一个微服务项目，里面的guns脚手架，其实就是父子工程！">
 <meta name="twitter:image" content="/images/og_image.png">
 
 
@@ -77,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="SunShine" height="28">
+                <img src="/images/logo.svg" alt="Maven父子工程" height="28">
             
             </a>
         </div>
@@ -134,31 +138,20 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">SpringBoot</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-27T04:20:48.000Z">2019-08-27</time>
+                <time class="level-item has-text-grey" datetime="2019-09-14T09:20:51.000Z">2019-09-14</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 526 个字)
+                    1 分钟 读完 (大约 150 个字)
                 </span>
                 
                 
@@ -167,21 +160,30 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/27/Springboot文件上传/">Springboot文件上传</a>
+                Maven父子工程
             
         </h1>
         <div class="content">
-            <p>对象存储oss可以提高页面访问速度，将静态资源放到云端，这里是放到阿里云。</p>
+            <p>父子工程在平时的时候，很少用。但是最近的一个微服务项目，里面的guns脚手架，其实就是父子工程！</p>
+<a id="more"></a>
+
+<p>其中父工程中的pom.xml文件中导入的依赖，在子模块中就没必要再导入。</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">modules</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-admin<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-core<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-rest<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-generator<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-film<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-cinema<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-user<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-gateway<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-api<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-payment<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-order<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">module</span>&gt;</span>guns-promo<span class="hljs-tag">&lt;/<span class="hljs-name">module</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">modules</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>但是父模块中要写上子模块的module，这样的话，子模块才可以使用相关依赖！</p>
+<p>当然，子模块之间是不能耦合的！</p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/27/Springboot文件上传/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Maven/">Maven</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -189,9 +191,62 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/21/Maven中Jdk问题/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Maven中Jdk问题</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/08/maven常见命令/">
+                <span class="level-item">Maven常见命令</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
