@@ -158,7 +158,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 读完 (大约 1398 个字)
+                    10 分钟 读完 (大约 1472 个字)
                 </span>
                 
                 
@@ -171,66 +171,17 @@
             
         </h1>
         <div class="content">
-            <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h1 id="基本原则"><a href="#基本原则" class="headerlink" title="基本原则"></a>基本原则</h1><h2 id="S-单一职责single"><a href="#S-单一职责single" class="headerlink" title="S 单一职责single"></a>S 单一职责single</h2><h2 id="O-开闭原则open"><a href="#O-开闭原则open" class="headerlink" title="O 开闭原则open"></a>O 开闭原则open</h2><p>对新增开放</p>
-<p>对修改封闭</p>
-<h2 id="L-里氏替代原则"><a href="#L-里氏替代原则" class="headerlink" title="L 里氏替代原则"></a>L 里氏替代原则</h2><h2 id="I-接口隔离原则-isolation"><a href="#I-接口隔离原则-isolation" class="headerlink" title="I 接口隔离原则 isolation"></a>I 接口隔离原则 isolation</h2><h2 id="D-依赖倒置-depend"><a href="#D-依赖倒置-depend" class="headerlink" title="D 依赖倒置 depend"></a>D 依赖倒置 depend</h2><p>User user = new User（）；</p>
-<h1 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h1><h1 id="单例模式常见应用场景："><a href="#单例模式常见应用场景：" class="headerlink" title="单例模式常见应用场景："></a>单例模式常见应用场景：</h1><p>–Windows的Task Manager（<strong>任务管理器</strong>）就是很典型的单例模式</p>
-<p>–windows的Recycle Bin（<strong>回收站</strong>）也是典型的单例应用。在整个系统运行过程中，回收站一直维护着仅有的一个实例。</p>
-<p>–项目中，读取配置文件的类，一般也只有一个对象。没有必要每次使用配置文件数据，每次new一个对象去读取。</p>
-<p>–<strong>网站的计数器</strong>，一般也是采用单例模式实现，否则难以同步。</p>
-<p>–应用程序的<strong>日志应用</strong>，一般都何用单例模式实现，这一般是由于共享的日志文件一直处于打开状态，因为只能有一个实例去操作，否则内容不好追加。</p>
-<p>–<strong>数据库连接池</strong>的设计一般也是采用单例模式，因为数据库连接是一种数据库资源。</p>
-<p>–操作系统的文件系统，也是大的单例模式实现的具体例子，一个操作系统只能有一个<strong>文件系统</strong>。</p>
-<p>–<strong>Application</strong> 也是单例的典型应用（Servlet编程中会涉及到）</p>
-<p>–在Spring中，<strong>每个Bean</strong>默认就是单例的，这样做的优点是Spring容器可以管理</p>
-<p>–在servlet编程中，每个<strong>Servlet</strong>也是单例</p>
-<p>–在spring MVC框架/struts1框架中，控制器对象也是单例</p>
-<h1 id="单例模式的特点"><a href="#单例模式的特点" class="headerlink" title="单例模式的特点:"></a>单例模式的特点:</h1><p>1、单例类只能有<strong>一个</strong>实例<strong>。<br>2、单例类必须自己创建自己的唯一实例。</strong>构造方法私有**<br>3、单例类必须给所有其他对象提供这一实例。</p>
-<p>全局只包含一个自己的实例</p>
-<p>特点</p>
-<p><img src="/images/Spring.assets/4ce89af3669253f646fcf28358876f04.png" alt></p>
-<h2 id="线程不安全的懒加载"><a href="#线程不安全的懒加载" class="headerlink" title="线程不安全的懒加载"></a>线程不安全的懒加载</h2><p>有可能两个线程同时调用,就会是两个对象,所以线程不安全!</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton1</span> </span>&#123;</span><br><span class="line">     <span class="hljs-comment">//1、单例类只能有一个实例。</span></span><br><span class="line">    <span class="hljs-keyword">static</span> Singleton1 singleton1;</span><br><span class="line">    <span class="hljs-comment">//2、单例类必须自己创建自己的唯一实例。→构造方法私有</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Singleton1</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-comment">//3、单例类必须给所有其他对象提供这一实例。</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Singleton1 <span class="hljs-title">getSingleton</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (singleton1 == <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">            singleton1 = <span class="hljs-keyword">new</span> Singleton1();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> singleton1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/Spring.assets/388e4ce20ef8e5ef1944e5b8b05d3124.png" alt></p>
-<h2 id="线程安全的懒加载"><a href="#线程安全的懒加载" class="headerlink" title="线程安全的懒加载"></a>线程安全的懒加载</h2><p><img src="/images/Spring.assets/1782639ff3e742d4ac9efb46d50bc840.png" alt></p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton2</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//1、单例类只能有一个实例。</span></span><br><span class="line">    <span class="hljs-keyword">static</span> Singleton2 singleton2;</span><br><span class="line">    <span class="hljs-comment">//2、单例类必须自己创建自己的唯一实例。→构造方法私有</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Singleton2</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-comment">//3、单例类必须给所有其他对象提供这一实例。</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">static</span> Singleton2 <span class="hljs-title">getSingleton</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (singleton2 == <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">            singleton2 = <span class="hljs-keyword">new</span> Singleton2();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> singleton2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton3</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//1、单例类只能有一个实例。</span></span><br><span class="line">    <span class="hljs-keyword">static</span> Singleton3 singleton3 = <span class="hljs-keyword">new</span> Singleton3();</span><br><span class="line">    <span class="hljs-comment">//2、单例类必须自己创建自己的唯一实例。→构造方法私有</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Singleton3</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-comment">//3、单例类必须给所有其他对象提供这一实例。</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Singleton3 <span class="hljs-title">getSingleton</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> singleton3;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="线程安全的立即加载"><a href="#线程安全的立即加载" class="headerlink" title="线程安全的立即加载"></a>线程安全的立即加载</h2><p><img src="/images/Spring.assets/e49c366179ac83329c7bdc49ec3d9464.png" alt></p>
-<h2 id="线程安全懒加载（内部类的实现）"><a href="#线程安全懒加载（内部类的实现）" class="headerlink" title="线程安全懒加载（内部类的实现）"></a>线程安全懒加载（内部类的实现）</h2><p>内部类</p>
-<p><img src="/images/Spring.assets/409c1826ac13741f23b700007b303d48.png" alt></p>
-<p>public class Singleton4 {<br>    //2、单例类必须自己创建自己的唯一实例。→构造方法私有<br>    private Singleton4(){}<br>    //3、单例类必须给所有其他对象提供这一实例。<br>    public static Singleton4 getSingleton(){<br>        System.out.println(“outer getSingleton”);<br>        return Inner.getInstance();<br>    }</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton4</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//2、单例类必须自己创建自己的唯一实例。→构造方法私有</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Singleton4</span><span class="hljs-params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="hljs-comment">//3、单例类必须给所有其他对象提供这一实例。</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Singleton4 <span class="hljs-title">getSingleton</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"outer getSingleton"</span>);</span><br><span class="line">        <span class="hljs-keyword">return</span> Inner.getInstance();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inner</span></span>&#123;</span><br><span class="line">        <span class="hljs-comment">//1、单例类只能有一个实例。</span></span><br><span class="line">        <span class="hljs-keyword">static</span> Singleton4 singleton4 = <span class="hljs-keyword">new</span> Singleton4();</span><br><span class="line">        <span class="hljs-comment">/*static &#123;</span></span><br><span class="line"><span class="hljs-comment">            singleton4 = new Singleton4();</span></span><br><span class="line"><span class="hljs-comment">            System.out.println("inner static");</span></span><br><span class="line"><span class="hljs-comment">        &#125;*/</span></span><br><span class="line"></span><br><span class="line">        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Singleton4 <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="hljs-string">"inner getInstance"</span>);</span><br><span class="line">            <span class="hljs-keyword">return</span> singleton4;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="工厂"><a href="#工厂" class="headerlink" title="工厂"></a>工厂</h1><p>通过在工厂中实现实例的创建逻辑，对外隐藏实例的创建过程</p>
-<h2 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h2><p>通过给定的参数的不同，返回不同的实例</p>
-<p>当我们去新增新的实例的时候，需要修改代码（和开闭原则有些许出入）</p>
-<p><img src="/images/Spring.assets/8d32b5703fca6c54f862e388755ef099.png" alt></p>
-<h2 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h2><p>更加具体的工厂</p>
-<p><img src="/images/Spring.assets/660f21f5c56db992f83dde569f90e05a.png" alt></p>
-<h1 id="建造者Builder"><a href="#建造者Builder" class="headerlink" title="建造者Builder"></a>建造者Builder</h1><p>侧重点：参数的设置</p>
-<p>造人→头 arm leg</p>
-<p>-–iq 150</p>
-<p>-–胳膊180</p>
-<p>-–腿 140</p>
-<p><img src="/images/Spring.assets/26d3bf0cf0bb839a302c3249c96079f0.png" alt></p>
-<h1 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h1><h2 id="静态代理"><a href="#静态代理" class="headerlink" title="静态代理"></a>静态代理</h2><p><img src="/images/Spring.assets/6bda2ffef86bfe8c6e64f602e2950c43.png" alt></p>
-<h2 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h2><p>生成代理对象</p>
-<p>Jdk的动态代理：接口的接口的实现</p>
-<p>Cglib动态代理</p>
-<p><img src="/images/Spring.assets/0d0163d419aca5ced0d2cddfe1a42c95.png" alt></p>
-<p><img src="/images/Spring.assets/97913418d13304c9c520e714bf55de55.png" alt></p>
-<p>以后用maven就不需要导入jar包啦,只需要自己在pom.xml里面写依赖,然后他,自己就可以导入依赖啦!</p>
-<p>还有,以后依赖也不用自己写,直接在Maven仓库查出来</p>
-<p><a href="https://mvnrepository.com/artifact" target="_blank" rel="noopener">https://mvnrepository.com/artifact</a></p>
-<p>将下面的maven粘贴上就好!</p>
-<p>还要注意的是,相应的依赖版本太新,不然不能用!会出现time zone异常,好像是区域不合适!</p>
-<p>还有需要注意的是,配置文件必须要写在resources下面!</p>
-
+            <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p>设计模式在了解很多优秀的源码中起到很重要的作用。比如优秀的Spring源码等，里面有很多设计模式的使用。在常用的23种设计模式中，这了列举几种更常用的设计模式。</p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/04/设计模式/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
