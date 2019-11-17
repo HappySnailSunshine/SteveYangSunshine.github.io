@@ -7,22 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Maven常见命令 - SunShine</title>
+<title>JVM垃圾回收算法 - SunShine</title>
 
 
-    <meta name="description" content="Maven中常见命令，在项目中使用较多,要熟练掌握！">
-<meta name="keywords" content="Maven">
+    <meta name="description" content="本文主要将，JVM中的垃圾对象判别标准和垃圾回收算法。">
+<meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven常见命令">
-<meta property="og:url" content="www.yanglei.pro/2019/07/08/maven常见命令/index.html">
+<meta property="og:title" content="JVM垃圾回收算法">
+<meta property="og:url" content="www.yanglei.pro/2019/11/16/JVM垃圾回收算法/index.html">
 <meta property="og:site_name" content="SunShine">
-<meta property="og:description" content="Maven中常见命令，在项目中使用较多,要熟练掌握！">
+<meta property="og:description" content="本文主要将，JVM中的垃圾对象判别标准和垃圾回收算法。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/images/og_image.png">
-<meta property="og:updated_time" content="2019-11-06T09:50:51.129Z">
+<meta property="og:updated_time" content="2019-11-17T02:26:21.190Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven常见命令">
-<meta name="twitter:description" content="Maven中常见命令，在项目中使用较多,要熟练掌握！">
+<meta name="twitter:title" content="JVM垃圾回收算法">
+<meta name="twitter:description" content="本文主要将，JVM中的垃圾对象判别标准和垃圾回收算法。">
 <meta name="twitter:image" content="/images/og_image.png">
 
 
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Maven常见命令" height="28">
+                <img src="/images/logo.svg" alt="JVM垃圾回收算法" height="28">
             
             </a>
         </div>
@@ -145,13 +145,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-08T09:12:46.000Z">2019-07-08</time>
+                <time class="level-item has-text-grey" datetime="2019-11-16T04:31:08.000Z">2019-11-16</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 692 个字)
+                    7 分钟 读完 (大约 1072 个字)
                 </span>
                 
                 
@@ -160,55 +160,33 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Maven常见命令
+                JVM垃圾回收算法
             
         </h1>
         <div class="content">
-            <p>Maven中常见命令，在项目中使用较多,要熟练掌握！</p>
+            <p>本文主要将，JVM中的垃圾对象判别标准和垃圾回收算法。</p>
 <a id="more"></a>
 
-<h1 id="Web项目基本知识"><a href="#Web项目基本知识" class="headerlink" title="Web项目基本知识"></a>Web项目基本知识</h1><p><img src="/images/Spring.assets/9a7ea2a686c9564a60edd62372e88d64-1569141259664.png" alt></p>
-<h1 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h1><p>过程</p>
-<p><img src="/images/Spring.assets/c320bf7d7cb7dcc7726a300166b5c8ad-1569141259665.png" alt></p>
-<p>Clean：清理后续所有过程产生的文件</p>
-<p>Compile：编译，不仅仅是class、同时包含将resources所对应的文件放到classes目录下</p>
-<p>Test：单元测试、（Tests测试目录）所有的单元测试执行一遍、也会输出一个单元测试的报告</p>
-<p>Package：将文件打包成jar或者war</p>
-<h1 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h1><p>对jar包的版本进行统一的管理</p>
-<h1 id="Maven工程"><a href="#Maven工程" class="headerlink" title="Maven工程"></a>Maven工程</h1><p>配置文件：pom.xml (项目的根目录下)</p>
-<p><img src="/images/Spring.assets/3db4f2fe049b7826b5a6c95856d6865f-1569141259665.png" alt></p>
-<p><img src="/images/Spring.assets/a0de652fb31594ef81979053e91add0a-1569141259665.png" alt></p>
-<p><img src="/images/Spring.assets/1572859148539.png" alt="1572859142818"></p>
-<h1 id="Maven的安装及使用"><a href="#Maven的安装及使用" class="headerlink" title="Maven的安装及使用"></a>Maven的安装及使用</h1><h2 id="下载压缩包解压"><a href="#下载压缩包解压" class="headerlink" title="下载压缩包解压"></a>下载压缩包解压</h2><h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>MAVEN_HOME:包含bin文件夹的目录</p>
-<p>Path：%MAVEN_HOME%/bin</p>
-<p>JAVA_HOME</p>
-<p>输入mvn –v的时候出现版本号，意味着安装完成</p>
-<h2 id="Maven配置"><a href="#Maven配置" class="headerlink" title="Maven配置"></a>Maven配置</h2><h3 id="指定本地仓库"><a href="#指定本地仓库" class="headerlink" title="指定本地仓库"></a>指定本地仓库</h3><p><img src="/images/Spring.assets/ea2d977d9d1d2e9ec78ca58134d846fb-1569141259665.png" alt></p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>要注意的点：要在mirrors标签里配置mirror标签，推荐大家使用阿里云的镜像（远程仓库）</p>
-<p><img src="/images/Spring.assets/d1de40cf257a477ffc5cdea69ccbc067-1569141259665.png" alt></p>
-<h2 id="Maven工程的目录结构"><a href="#Maven工程的目录结构" class="headerlink" title="Maven工程的目录结构"></a>Maven工程的目录结构</h2><p>--src</p>
-<p>--main 开发部署的代码配置文件等文件</p>
-<p>--java 放的是代码</p>
-<p>--resources 配置文件及资源文件</p>
-<p>--webapp web项目的根目录</p>
-<p>--test 单元测试相关的文件</p>
-<blockquote>
-<p>--java 放的是测试代码</p>
-</blockquote>
-<p>--resources 测试配置文件及资源文件（可以不要，可以使用main下的配置文件）</p>
-<p>--pom.xml maven的配置文件</p>
-<p>--target 文件夹，项目构建相关流程产生的文件，都放在这个目录下</p>
-<h2 id="Maven命令"><a href="#Maven命令" class="headerlink" title="Maven命令"></a>Maven命令</h2><h3 id="mvn-compile"><a href="#mvn-compile" class="headerlink" title="mvn compile"></a>mvn compile</h3><p>编译：将java和resources目录下的代码和文件编译，编译到target/classes目录下</p>
-<h3 id="mvn-clean"><a href="#mvn-clean" class="headerlink" title="mvn clean"></a>mvn clean</h3><p>后续所有构建过程产生的文件都会被清理（删除）掉、target文件夹都会被删除掉</p>
-<h3 id="mvn-test"><a href="#mvn-test" class="headerlink" title="mvn test"></a>mvn test</h3><p>执行单元测试，src\test\java所有包含@Test注解的方法</p>
-<p>如果单元测试执行失败不会执行后续的操作</p>
-<p>执行失败原因：类名，包含Test</p>
-<h3 id="mvn-package"><a href="#mvn-package" class="headerlink" title="mvn package"></a>mvn package</h3><p>执行打包：默认打包成jar包，文件名artifactId+version+打包类型</p>
-<p>配置文件修改打包类型&lt;packaging&gt;war</p>
-<p>要求：maven 写packaging=war</p>
-<h3 id="mvn-install"><a href="#mvn-install" class="headerlink" title="mvn install"></a>mvn install</h3><p>将我们的项目安装到本地仓库</p>
-<h1 id="idea中使用maven"><a href="#idea中使用maven" class="headerlink" title="idea中使用maven"></a>idea中使用maven</h1><p><img src="/images/Spring.assets/c7b6ea5af0c11ebe219bd1a7cc480e58-1569141259666.png" alt></p>
-<p><img src="/images/Spring.assets/37f72d703b5061f9c21c474b7469a4fa-1569141259666.png" alt></p>
+<h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><h3 id="垃圾回收算法："><a href="#垃圾回收算法：" class="headerlink" title="垃圾回收算法："></a>垃圾回收算法：</h3><p><img src="/images/JVM.assets/1573915969069.png" alt="1573915969069"></p>
+<h3 id="垃圾对象判定标准"><a href="#垃圾对象判定标准" class="headerlink" title="垃圾对象判定标准"></a><strong>垃圾对象判定标准</strong></h3><p>jvm的GC工作主要针对的对象是堆内存，在做GC工作之前，首先要判定堆内存中的对象实例是否为垃圾，通常使用以下两种算法来定义</p>
+<p><strong>1.引用计数算法</strong></p>
+<p>java在运行时，当有一个地方引用该对象实例，会将这个对象实例加1，引用失效时就减1，jvm在扫描内存时，发现引用计数值为0的则是垃圾对象，计数值大于0的则为活跃对象。</p>
+<p>目前垃圾回收算法，没有采用引用计数算法，原因是在对象互相引用的情况下，无法判定两者是否为垃圾对象。</p>
+<p><strong>2. 根搜索算法</strong></p>
+<p>根搜索算法是以“GC ROOTS”为起始点往下搜索，所有经过的对象合并起来称为引用链，在这引用链里，没有的对象称为垃圾对象，（实际上jvm还做了一个筛选动作，判定当前对象是否执行finalize()方法，如果不需要执行才判定为垃圾对象，这里不做介绍），在引用链里的是活跃对象。那什么样的对象才能称为“GC ROOTS”呢？以下四种可以</p>
+<p>虚拟机栈（栈帧中的本地变量表）中引用的对象。方法区中的类静态属性引用的对象。方法区中的常量引用的对象。本地方法栈中 JNI（Native 方法）的引用对象。</p>
+<h3 id="垃圾回收算法"><a href="#垃圾回收算法" class="headerlink" title="垃圾回收算法"></a><strong>垃圾回收算法</strong></h3><p><strong>1. 标记-清除（Mark-Sweep）</strong></p>
+<p><img src="/images/JVM.assets/96dda144ad345982e2eb2f9c6de48fa9cbef8474.jpeg" alt="img">标记清除流程</p>
+<p>jvm会扫描所有的对象实例，通过根搜索算法，将活跃对象进行标记，jvm再一次扫描所有对象，将未标记的对象进行清除，只有清除动作，不作任何的处理，这样导致的结果会存在很多的内存碎片。</p>
+<p><strong>2. 复制（copying）</strong></p>
+<p><img src="/images/JVM.assets/cdbf6c81800a19d854ca145852ea3c8fa71e46b3.jpeg" alt="img">复制流程</p>
+<p>jvm扫描所有对象，通过根搜索算法标记被引用的对象，之后会申请新的内存空间，将标记的对象复制到新的内存空间里，存活的对象复制完，会清空原来的内存空间，将新的内存最为jvm的对象存储空间。这样虽然解决了内存内存碎片问题，但是如果对象很多，重新申请新的内存空间会很大，在内存不足的场景下，会对jvm运行造成很大的影响</p>
+<p><strong>3. 标记-整理（Mark-compact）</strong></p>
+<p><img src="/images/JVM.assets/1ad5ad6eddc451dae5ef6cc2d7edec62d0163296.jpeg" alt="img">标记整理流程</p>
+<p>标记整理实际上是在标记清除算法上的优化，执行完标记清除全过程之后，再一次对内存进行整理，将所有存活对象统一向一端移动，这样解决了内存碎片问题。</p>
+<p><strong>4. 分代回收</strong></p>
+<p><img src="/images/JVM.assets/d788d43f8794a4c2f657f51d6fe4a5d1ad6e39a0.jpeg" alt="img">分代回收算法</p>
+<p>目前jvm常用回收算法就是分代回收，年轻代以复制算法为主，老年代以标记整理算法为主。原因是年轻代对象比较多，每次垃圾回收都有很多的垃圾对象回收，而且要尽可能快的减少生命周期短的对象，存活的对象较少，这时候复制算法比较适合，只要将有标记的对象复制到另一个内存区域，其余全部清除，并且复制的数量较少，效率较高；而老年代是年轻代筛选出来的对象，被标记比较高，需要删除的对象比较少，显然采用标记整理效率较高。</p>
 
         </div>
         
@@ -216,7 +194,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Maven/">Maven</a>
+                    <a class="has-link-grey -link" href="/tags/JVM/">JVM</a>
                 </div>
             </div>
         </div>
@@ -279,17 +257,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/04/设计模式/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">常用设计模式</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/01/Steve/">
-                <span class="level-item">IDEA Keymap</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/29/TypeHander/">
+                <span class="level-item">TypeHander</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -305,8 +276,8 @@
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'www.yanglei.pro/2019/07/08/maven常见命令/';
-        this.page.identifier = '2019/07/08/maven常见命令/';
+        this.page.url = 'www.yanglei.pro/2019/11/16/JVM垃圾回收算法/';
+        this.page.identifier = '2019/11/16/JVM垃圾回收算法/';
     };
     (function() {
         var d = document, s = d.createElement('script');  
